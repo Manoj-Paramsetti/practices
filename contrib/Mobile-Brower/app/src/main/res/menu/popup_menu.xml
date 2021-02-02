@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toggle_tab_switcher_menu_item"
+        android:title="@string/toggle_tab_switcher_menu_item"
+        app:actionLayout="@layout/tab_switcher_menu_item"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/horizontalMenu"
+        android:title=""
+        app:actionLayout="@layout/popup_horizontal"
+        android:orderInCategory="0">
+        <menu>
+            <item
+                android:id="@+id/back"
+                android:icon="@drawable/ic_arrowback"
+                app:showAsAction="ifRoom"
+                android:title="back"/>
+            <item
+                android:id="@+id/setbookmark"
+                android:icon="@drawable/ic_bookmark_hollow"
+                app:showAsAction="ifRoom"
+                android:title="bookmark"/>
+            <item
+                android:id="@+id/download"
+                android:icon="@drawable/ic_download"
+                app:showAsAction="ifRoom"
+                android:title="download"/>
+            <item
+                android:id="@+id/info"
+                android:icon="@drawable/ic_info"
+                app:showAsAction="ifRoom"
+                android:title="info"/>
+            <item
+                android:id="@+id/refresh"
+                android:icon="@drawable/ic_refresh_24"
+                app:showAsAction="ifRoom"
+                android:title="refresh"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/add_tab_menu_item"
+        android:title="@string/add_tab_menu_item"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/incognito"
+        android:title="Incognito Mode"
+        android:checkable="true"
+        android:checked="false"/>
+    <item
+        android:id="@+id/bookmark"
+        android:title="Bookmarks" />
+
+    <item
+        android:id="@+id/btnAdBlock"
+        android:title="AdBlock"
+        android:checkable="true"
+        android:checked="true"/>
+    <item
+        android:id="@+id/history"
+        android:title="History"/>
+
+    <!--<item
+        android:id="@+id/audioQueue"
+        android:title="Audio Queue"/>-->
+<!--    <item-->
+<!--        android:id="@+id/downloadVids"-->
+<!--        android:title="Download videos on this page"/>-->
+    <item
+        android:id="@+id/clearData"
+        android:title="Clear Data"/>
+    <item
+        android:id="@+id/erase"
+        android:title="Clear Data and Close all tabs"/>
+    <item
+        android:id="@+id/downloads"
+        android:title="Downloads"/>
+    <item
+        android:checkable="true"
+        android:id="@+id/desktopSite"
+        android:title="Desktop Site"/>
+
+    <item
+        android:id="@+id/donate"
+        android:title="Donate"/>
+
+<!--    <item-->
+<!--        android:id="@+id/settings_menu_item"-->
+<!--        android:title="Settings"/>-->
+
+    <item
+        android:id="@+id/appInfo"
+        android:title="About App"/>
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"/>
+</menu>

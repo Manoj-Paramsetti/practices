@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+             >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <de.mrapp.android.util.view.UnfocusableToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ic_launcher_background"
+            android:elevation="2sp"
+            android:focusable="false"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:theme="?attr/toolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <EditText
+                android:id="@+id/url_EditText_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:background="@drawable/searchtextview"
+                android:elevation="4sp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Search here"
+                android:inputType="textWebEditText"
+                android:maxLines="1"
+                android:padding="@dimen/tab_padding"
+                android:textColor="#121212"
+                android:textColorHighlight="#c1c1c1"
+                android:textColorHint="#444444"
+                android:textColorLink="#000000"
+                android:textCursorDrawable="@null"
+                android:textIsSelectable="true"
+                android:textSize="20sp"
+                android:theme="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored" />
+
+
+        </de.mrapp.android.util.view.UnfocusableToolbar>
+
+    </FrameLayout>
+    <ProgressBar
+
+        android:id="@+id/progressBar_ID"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      />
+<!--    <ImageView-->
+<!--        android:id="@+id/add_shortcut"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:src="@drawable/ic_baseline_add_24"/>-->
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/shortcutlinks_recycler"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_marginTop="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:visibility="visible"
+        android:src="@drawable/srp7"/>
+
+    <WebView
+        android:id="@+id/webView_ID"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".99"
+        android:layout_marginTop="10dp">
+
+        <org.adblockplus.libadblockplus.android.webview.AdblockWebView
+            android:id="@+id/adBlock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            />
+
+
+    </WebView>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".005"
+        android:background="@android:color/transparent"
+        android:elevation="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/backButton_ID"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrowback" />
+
+        <ImageButton
+            android:id="@+id/forwardButton_ID"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_forward" />
+
+        <ImageButton
+            android:id="@+id/stopButton_ID"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cancel" />
+
+        <ImageButton
+            android:id="@+id/refreshButon_ID"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_refresh_24" />
+
+        <ImageButton
+            android:id="@+id/homeButton_ID"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
